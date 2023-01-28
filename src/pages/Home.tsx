@@ -7,7 +7,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
-import { toast } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 import { AiOutlineSearch } from "react-icons/ai";
 import { api } from "../services/api";
 import { Loader } from "../utils/Loader";
@@ -47,6 +47,7 @@ export function Home() {
   return (
     <>
       <Loader Circular={loading} />
+      <Toaster position="bottom-left" reverseOrder={false} />
       <Box
         sx={{
           display: "flex",
